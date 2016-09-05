@@ -32,6 +32,37 @@ header{
   display: inline-block;
   font-family: 'ralewaybold';
   padding: 0 0 0 30px;
+  position: relative;
+}
+
+.header_li:first-child:hover .slider_ul_drop{
+  height: 95px;
+  width: 83px;
+  background-color: black;
+  color: white;
+  font-family: 'ralewayregular';
+  z-index: 3;
+  position: absolute;
+  top: 40px;
+  right: -25px;
+  list-style-type: none;
+
+}
+
+.slider_li_drop{
+  margin: 10px auto 0 auto;
+}
+
+.slider_ul_drop::before{
+  width: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: 12px solid transparent;
+  border-bottom-color: black;
+}
+
+.header_li:first-child:not(:hover) .slider_ul_drop{
+  display: none;
 }
 
 /* section1 */
@@ -49,32 +80,6 @@ background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1)
 background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(213,213,213,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5d5d5', GradientType=0 );
 }
-
-.slider_drop{
-  display: none;
-}
-
-.header_li:first-child:hover{
-  height: 95px;
-  width: 120px;
-  background-color: black;
-  color: white;
-  font-family: 'ralewayregular';
-  z-index: 3;
-  position: absolute;
-  top: 60px;
-  right: 380px;
-}
-
-.slider_ul_drop{
-  display: none;
-}
-
-
-
-
-
-
 
 .slider_left{
   color: #24ba9f;
