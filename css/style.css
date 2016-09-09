@@ -1,13 +1,13 @@
 header{
   height: 40px;
-  width: 1200px;
+  width: 100%;
   background-color: black;
   color: white;
   font-family: 'ralewayregular';
 }
 
 .main_width{
-  width: 1050px;
+  width: 1060px;
   margin: 0 auto;
 }
 
@@ -35,40 +35,50 @@ header{
   position: relative;
 }
 
-.header_li:first-child:hover .slider_ul_drop{
+.slider_ul_drop{
   height: 95px;
   width: 83px;
   background-color: black;
-  color: white;
-  font-family: 'ralewayregular';
-  z-index: 3;
+  z-index: 99999;
   position: absolute;
   top: 40px;
   right: -25px;
   list-style-type: none;
-
-}
-
-.slider_li_drop{
-  margin: 10px auto 0 auto;
+  display: none;
+  margin: 0;
 }
 
 .slider_ul_drop::before{
+  top: -18px;
+  position: relative;
+  left: 20px;
+  text-align: center;
+  content: "";
+  display: block;
   width: 0;
-  margin-left: auto;
-  margin-right: auto;
-  border: 12px solid transparent;
+  height: 0;
+  border: 9px solid transparent;
   border-bottom-color: black;
 }
 
-.header_li:first-child:not(:hover) .slider_ul_drop{
-  display: none;
+.header_li:first-child:hover .slider_ul_drop{
+  display: block;
+}
+
+.slider_li_drop{
+  display: block;
+  font-family: 'ralewayregular';
+  font-size: 14px;
+  line-height: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
 }
 
 /* section1 */
 .slider{
   height: 500px;
-  width: 1200px;
+  width: 100%;
   position: relative;
   font-family: 'ralewayregular';
   background: rgba(255,255,255,1);
@@ -100,7 +110,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   width: 420px;
   position: absolute;
   top: 140px;
-  right: 190px;
+  right: 270px;
 }
 
 .slider_h1{
@@ -135,20 +145,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   font-size: 80px;
   padding-top: 210px;
   position: absolute;
-  right: 70px;
+  right: 140px;
 }
 
 /* section2 */
 .products{
   height: 310px;
-  width: 1200px;
+  width: 100%;
   background-color: white;
 }
 
 .products_first, .products_second{
   display: inline-block;
   margin-top: 30px;
-  margin-right: 20px;
+  margin-right: 26px;
   position: relative;
 }
 
@@ -191,7 +201,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 /* section3 */
 .price{
   height: 725px;
-  width: 1200px;
+  width: 100%;
   background-color: #f1f1f1;
   font-family: 'ralewayregular';
 }
@@ -423,7 +433,7 @@ sup{
 /* section4 */
 .contact{
   height: 530px;
-  width: 1200px;
+  width: 100%;
   background-color: white;
   font-family: 'ralewayregular';
 }
@@ -510,7 +520,7 @@ input[type="submit"]{
 /* footer */
 footer{
   height: 100px;
-  width: 1200px;
+  width: 100%;
   background-color: white;
   font-family: 'ralewayregular';
 }
