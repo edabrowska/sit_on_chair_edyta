@@ -148,6 +148,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   right: 140px;
 }
 
+.red_chair, .orange_chair{
+  display: none;
+}
+
 /* section2 */
 .products{
   height: 310px;
