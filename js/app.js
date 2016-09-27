@@ -2,12 +2,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 var menuList = document.querySelectorAll('header_li');
 var sectionSlider = document.querySelector('.slider');
-var sliderImg = sectionSlider.querySelectorAll('.main_width > img');
-var arrowLeft = sectionSlider.querySelector('.slider_left');
-var arrowRight = sectionSlider.querySelector('.slider_right');
+var sliderImg = sectionSlider.querySelectorAll('.main_width > .slider_chair > li > img');
+var prevPhoto = sectionSlider.querySelector('.slider_left');
+var nextPhoto = sectionSlider.querySelector('.slider_right');
+var visiblePictureIdx = 0;
 var sectionProducts = document.querySelector('.products');
 var prodDiv = sectionProducts.querySelectorAll('.main_width > div');
 console.log(sliderImg);
+console.log(prevPhoto);
+console.log(nextPhoto);
 //dropdown list;
   for(var i = 0, len = menuList.length; i < len; i++){
     menuList[i].addEventListener('mouseover', function(){
@@ -34,11 +37,32 @@ console.log(sliderImg);
   }
 
 //slider photos;
-  arrowLeft.addEventListener('click', function(){
-    for(var i = 0, len = sliderImg.length; i < len; i++){
-      sliderImg[i].style.display = 'block';
+  sliderImg[visiblePictureIdx].classList.add('visible');
+
+  nextPhoto.addEventListener('click', function(){
+    console.log('next clicked');
+    sliderImg[visiblePictureIdx].classList.remove('visible');
+    visiblePictureIdx += 1;
+
+    if(visiblePictureIdx >= 4){
+      visiblePictureIdx = visiblePictureIdx -1;
     }
 
+    sliderImg[visiblePictureIdx].classList.add('visible');
+    console.log(sliderImg[visiblePictureIdx]);
+  });
+
+  prevPhoto.addEventListener('click', function(){
+    console.log('prev clicked');
+    sliderImg[visiblePictureIdx].classList.remove('visible');
+    visiblePictureIdx -= 1;
+
+    if(visiblePictureIdx < 0){
+      visiblePictureIdx = 0;
+    }
+
+    sliderImg[visiblePictureIdx].classList.add('visible');
+      console.log(sliderImg[visiblePictureIdx]);
   });
 
 //products name dissappear after mouseover;

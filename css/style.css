@@ -79,7 +79,7 @@ header{
 .slider{
   height: 500px;
   width: 100%;
-  position: relative;
+/*  position: relative; */
   font-family: 'ralewayregular';
   background: rgba(255,255,255,1);
 background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(213,213,213,1) 100%);
@@ -97,12 +97,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   font-size: 80px;
   padding-top: 210px;
   position: absolute;
+  border-color: transparent;
+  background-color: transparent;
 }
 
-.black_chair{
+.slider_chair{
+  list-style: none;
+}
+
+.slider_chair > li > img{
+  visibility: hidden;
+}
+
+.visible{
   float: left;
   margin-top: 110px;
   height: 340px;
+  width: 240px;
+  visibility: visible;
 }
 
 .slider_div{
@@ -146,10 +158,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   padding-top: 210px;
   position: absolute;
   right: 140px;
-}
-
-.red_chair, .orange_chair{
-  display: none;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 /* section2 */
