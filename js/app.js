@@ -104,56 +104,102 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 //drop down lists
-  var listArrow = document.querySelectorAll('.list_arrow');
+  var prodForm = document.querySelector('.form');
   var dropDiv = document.querySelectorAll('.drop_down_list');
-
-      console.log(transport);
-      console.log(dropDiv);
+  var kindList = dropDiv[0];
+  var colorList = dropDiv[1];
+  var materialList = dropDiv[2];
+  var listArrow = document.querySelectorAll('.list_arrow');
 
 //drop kind
       listArrow[0].addEventListener('click', function(e){
         console.log('kind clicked');
-        var subList = dropDiv[0].querySelector('.list_panel');
+        var subList = kindList.querySelector('.list_panel');
         var itemsList = subList.querySelectorAll('li');
 
         if(subList !== null){
           subList.classList.toggle('inline');
         }
 
-        if(subList.classList('inline')){
-        //for usuwa clasę, ale if ją dodaje z powrotem...
+        if(subList.classList.contains('inline')){
             for (var i = 0, len = itemsList.length; i < len; i++){
-                var item = itemsList[i];
-                if(item.classList.contains('inline'))(
-                    item.classList.remove('inline')
-                )
+                itemsList[i].addEventListener('click', function(){
+                  subList.classList.remove('inline')
+                });
             }
          }
-
-
       });
 
-
-    //drop color
+//drop color
       listArrow[1].addEventListener('click', function(){
         console.log('color clicked');
-        var subList = dropDiv[1].querySelector('.list_panel');
+        var subList = colorList.querySelector('.list_panel');
+        var itemsList = subList.querySelectorAll('li');
 
         if(subList !== null){
           subList.classList.toggle('inline');
         }
+
+        if(subList.classList.contains('inline')){
+            for (var i = 0, len = itemsList.length; i < len; i++){
+                itemsList[i].addEventListener('click', function(){
+                  subList.classList.remove('inline')
+                });
+            }
+         }
       });
 
-
-    //drop material
+//drop material
       listArrow[2].addEventListener('click', function(){
         console.log('material clicked');
-        var subList = dropDiv[2].querySelector('.list_panel');
+        var subList = materialList.querySelector('.list_panel');
+        var itemsList = subList.querySelectorAll('li');
 
         if(subList !== null){
           subList.classList.toggle('inline');
         }
+
+        if(subList.classList.contains('inline')){
+            for (var i = 0, len = itemsList.length; i < len; i++){
+                itemsList[i].addEventListener('click', function(){
+                  subList.classList.remove('inline')
+                });
+            }
+         }
       });
 
+//summary
+  var panelLeft = document.querySelector('.panel_left');
+  var sumColor = panelLeft.querySelector('.color');
+  var sumMat = panelLeft.querySelector('.pattern');
+  var sumTrans = panelLeft.querySelector('.transport');
+  var panelRight = document.querySelector('.panel_right');
+  var sumColorVal = panelRight.querySelector('.color');
+  var sumMatVal = panelRight.querySelector('.pattern');
+  var sumTransVal = panelRight.querySelector('.transport');
+  var summaryVal = document.querySelector('.sum');
 
+  var subListKind = kindList.querySelectorAll('.list_panel > li');
+  var subListCol = colorList.querySelectorAll('.list_panel > li');
+  var subListMat = materialList.querySelectorAll('.list_panel > li');
+
+console.log(sumColorVal);
+console.log(sumTransVal);
+
+  /*  for(var i = 0, len = subListKind.length; i < len; i++){
+      var kindPrice = subListKind[i].getAttribute('data-kind-price');
+      sumKindVal.innerText = kindPrice;
+    }
+  */
+
+    for(var i = 0, len = subListCol.length; i < len; i++){
+      subListCol[i].addEventListener('click', function(){
+        var colorPrice = subListCol[i].getAttribute('data-kind-price');
+        sumColorVal.innerText = colorPrice;
+      });  
+    }
+    for(var i = 0, len = subListMat.length; i < len; i++){
+      var materialPrice = subListMat[i].getAttribute('data-kind-price');
+      sumMatVal.innerText = materialPrice;
+    }
 });
