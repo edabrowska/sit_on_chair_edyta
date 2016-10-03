@@ -24,19 +24,21 @@
   </section>
 </header>
 <article class="slider">
-  <section class="main_width">
-    <button class="slider_left"> < </button>
-    <ul class="slider_chair">
-      <li><img src="images/black_chair.png" class="black_chair"/></li>
-      <li><img src="images/red_chair.png" class="red_chair"/></li>
-      <li><img src="images/orange.png" class="orange_chair"/></li>
-    </ul>
-    <div class="slider_div">
-      <h1 class="slider_h1">SIT <span class="green_on">ON</span> OUR <span class="green_on">CHAIR</span></h1>
-      <p class="slider_par">Gummi bears sweet roll cake liquorice chocolate. Chocolate bar marzipan cupcake ice cream jujubes. Cupcake candy gingerbread. Chocolate bar jelly-o sesame snaps. Muffin chupa chups apple pie dragée.</p>
-      <a href="#" class="slider_link">SEE MORE</a>
+  <section class="main_width slider_parent">
+    <button class="slider_left"> &lt; </button>
+    <div class="slider_container">
+      <ul class="slider_chair">
+        <li><img src="images/black_chair.png" class="black_chair"/></li>
+        <li><img src="images/red_chair.png" class="red_chair"/></li>
+        <li><img src="images/orange.png" class="orange_chair"/></li>
+      </ul>
+      <div class="slider_div">
+        <h1 class="slider_h1">SIT <span class="green_on">ON</span> OUR <span class="green_on">CHAIR</span></h1>
+        <p class="slider_par">Gummi bears sweet roll cake liquorice chocolate. Chocolate bar marzipan cupcake ice cream jujubes. Cupcake candy gingerbread. Chocolate bar jelly-o sesame snaps. Muffin chupa chups apple pie dragée.</p>
+        <a href="#" class="slider_link">SEE MORE</a>
+      </div>
     </div>
-    <button class="slider_right"> > </button>
+    <button class="slider_right"> &gt; </button>
   </section>
 </article>
 <article class="products">
@@ -133,6 +135,82 @@
     </section>
   </section>
 </article>
+<!---calc--->
+<section class="application">
+    <div class="main_width">
+        <section class="choice_part inline">
+            <header>
+                <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                <span class="green_bell"></span>
+            </header>
+
+            <div class="form">
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz rodzaj</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li>Clair</li>
+                        <li>Margarita</li>
+                        <li>Selena</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz kolor</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li>Czerwony</li>
+                        <li>Czarny</li>
+                        <li>Pomarańczowy</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz materiał</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li>Tkanina</li>
+                        <li>Skóra</li>
+                    </ul>
+                </div>
+                <div class="checkbox check-box">
+                    <input type="checkbox" id="transport" data-transport-price="200">
+                    <label for="transport">Transport</label>
+                </div>
+                <!--<div class="checkbox"></div>-->
+                <!--<span class="list_label inline_text">Transport</span>-->
+            </div>
+        </section>
+
+        <section class="image_part inline">
+            <img src="images/red_chair.png">
+        </section>
+
+        <section class="summary_part inline">
+            <header class="align_right">
+                <h3>PODSUMOWANIE</h3>
+                <span class="green_bell"></span>
+            </header>
+
+            <div class="summary_panel">
+                <div class="panel_left">
+                    <h4 class="title">Twój fotel</h4>
+                    <span class="color"></span>
+                    <span class="pattern"></span>
+                    <span class="transport"></span>
+                </div>
+                <div class="panel_right">
+                    <h4 class="title value"></h4>
+                    <span class="color value"></span>
+                    <span class="pattern value"></span>
+                    <span class="transport value"></span>
+                </div>
+                <div class="sum_label">SUMA</div>
+                <div class="sum"><strong></strong></div>
+            </div>
+            <a href="" class="green_button">Zamawiam</a>
+        </section>
+    </div>
+</section>
+<!---calc--->
 <article class="contact">
   <section class="main_width">
     <div class="contact_title">
