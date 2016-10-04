@@ -92,7 +92,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .slider_parent{
   position: relative;
 }
-.slider_left{
+
+.slider_left, .slider_right{
   color: #24ba9f;
   font-family: 'ralewayregular';
   font-size: 80px;
@@ -100,9 +101,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   position: absolute;
   border-color: transparent;
   background-color: transparent;
-  left: 0;
   cursor: pointer;
 }
+
+.slider_right{
+  right: 0;
+}
+
+.slider_left{
+  left: 0;
+}
+
 .slider_container{
   position: absolute;
   width: 900px;
@@ -113,8 +122,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   list-style: none;
 }
 
-.slider_chair > li > img{
+.slider_chair > li{
   visibility: hidden;
+  position: absolute;
 }
 
 .visible{
@@ -123,6 +133,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   height: 340px;
   width: 240px;
   visibility: visible;
+  display: inline-block;
 }
 
 .slider_div{
@@ -159,17 +170,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   padding-top: 15px;
 }
 
-.slider_right{
-  color: #24ba9f;
-  font-family: 'ralewayregular';
-  font-size: 80px;
-  padding-top: 210px;
-  position: absolute;
-  right: 0;
-  border-color: transparent;
-  background-color: transparent;
-  cursor: pointer;
-}
+
 
 /* section2 */
 .products{
@@ -466,8 +467,12 @@ sup{
 
 .application header.align_right{
   text-align: right;
+  background-color: #f9f9f9;
 }
 
+.choice_part > header{
+  background-color: #f9f9f9;
+}
 .form {
   margin-top:50px;
 }
@@ -679,6 +684,7 @@ sup{
 
 .title {
   height: 30px;
+  margin: 0;
 }
 
 /* section4 - contact */
