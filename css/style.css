@@ -127,7 +127,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   position: absolute;
 }
 
-.visible{
+.slider_chair > li.visible{
   float: left;
   margin-top: 110px;
   height: 340px;
